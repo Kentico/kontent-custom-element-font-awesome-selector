@@ -3,17 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Input with Ipsum Generator</title>
+  <title>Font Awesome Selector</title>
   <meta name="author" content="Jeroen Fürst">
 
   <!-- Kentico Custom element CSS-->
   <link rel="stylesheet" type="text/css" href="./custom-element.min.css">
+  <link rel="stylesheet" type="text/css" href="./fontawesome-iconpicker.min.css">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
 
   <!-- Kentico Custom elements API-->
   <script src="https://app.kontent.ai/js-api/custom-element.js"></script>
+  <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./fontawesome-iconpicker.min.js"></script>
 
   <!-- jquery -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 
 
   <!-- Custom elements styles -->
@@ -40,7 +45,10 @@
   <div class="disabled_overlay"></div>
   <div>
     <div class="text-field">
-      <input rows="5" class="text-field__input" id="text_input" type="text" />
+      <div class="input-group">
+        <input data-placement="bottomRight" class="form-control icp icp-auto" type="text" />
+        <span class="input-group-addon"></span>
+      </div>
     </div>
   </div>
   <!-- Custom element code -->
@@ -58,20 +66,16 @@
     }
 
     function setup(value) {
-      const input = document.querySelector('#text_input');
-      input.value = value;
-      $("#text_input").on('change input', function () {
-        if (!isDisabled) {
-          // Send updated text to Kentico
-          CustomElement.setValue(input.value);
-        }
+      $('.icp').iconpicker({defaultValue: value});
+      $('.icp').on('iconpickerSelected', function (e) {
+        CustomElement.setValue(e.iconpickerValue);
       });
     }
 
     function updateSize() {
       // Update the custom element height in the Kentico UI
       const height = Math.ceil($("html").height());
-      CustomElement.setHeight(height);
+      CustomElement.setHeight(height + 200);
     }
 
     function initCustomElement() {

@@ -8,7 +8,7 @@ notifications:
 node_js:
 - "stable"
 # Lint errors should trigger a failure.
-before_script:
+script:
 - npm run build
 deploy:
   provider: pages

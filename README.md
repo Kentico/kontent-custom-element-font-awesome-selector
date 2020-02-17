@@ -11,9 +11,7 @@ This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integr
 
 The custom element is storing the **svg of the picked icon**. As a data storage a [local JSON file](https://fontawesome.com/icons) is used.
 
-:bulb:
-
-If you want to take a look to another approach shat stores the *icon codename*, take a look to the sibling repository [kontent-custom-element-font-awesome-selector-codename](https://github.com/Simply007/kontent-custom-element-font-awesome-selector-codename).
+:bulb: If you want to take a look to another approach shat stores the *icon codename*, take a look to the sibling repository [kontent-custom-element-font-awesome-selector-codename](https://github.com/Simply007/kontent-custom-element-font-awesome-selector-codename).
 
 ## Stored value
 

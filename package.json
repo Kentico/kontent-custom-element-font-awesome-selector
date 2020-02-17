@@ -1,6 +1,6 @@
 {
-  "name": "element",
-  "version": "0.1.0",
+  "name": "kontent-custom-element-font-awesome-selector-svg",
+  "version": "1.0.0",
   "dependencies": {
     "@reach/router": "^1.2.1",
     "@testing-library/jest-dom": "^4.2.4",

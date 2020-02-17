@@ -1,12 +1,19 @@
 # Font Awesome Icon SVG Selector
 
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6a8536c6-626c-4c39-b072-df10de9e2c01/deploy-status)](https://app.netlify.com/sites/kontent-custom-element-font-awesome-selector-svg/deploys)
 
 ## A custom element for Kentico Kontent
 
 This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) for [Kentico Kontent](https://kontent.ai) that allows you to pick [Font Awesome Icon](https://fontawesome.com/icons).
 
+![Font Awesome Icon SVG Selector](showcase.gif)
+
 The custom element is storing the **svg of the picked icon**. As a data storage a [local JSON file](https://fontawesome.com/icons) is used.
+
+:bulb:
+
+If you want to take a look to another approach shat stores the *icon codename*, take a look to the sibling repository [kontent-custom-element-font-awesome-selector-codename](https://github.com/Simply007/kontent-custom-element-font-awesome-selector-codename).
 
 ## Stored value
 
